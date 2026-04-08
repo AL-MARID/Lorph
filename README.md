@@ -61,7 +61,7 @@ flowchart TB
         DS -- "7. Analyze Findings" --> DRE
     end
     
-    DRE -- "8. Compile Hundreds of Sources" --> SYN
+    DRE -- "8. Track & Deduplicate Sources" --> SYN
     SYN -- "9. Generate Final Response" --> OLLAMA
     OLLAMA -- "10. Stream Data" --> DRE
     
