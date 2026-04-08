@@ -17,6 +17,10 @@ Lorph is a full-stack AI chat application built to interact with cloud-based Lar
 
 This diagram shows how data moves from the user's input to the final response, highlighting the multi-iteration deep research loop.
 
+> [!IMPORTANT]
+> The diagram below shows Lorph’s high-level deep research workflow.
+> It is a conceptual view of the pipeline, not an exact map of the project’s internal code structure.
+
 ```mermaid
 flowchart TB
     subgraph Client [Frontend - React / Vite]
@@ -26,11 +30,7 @@ flowchart TB
     end
 
     subgraph Backend [Node.js / Express Server]
-        DRE[Deep Research Engine]
-        IP[Intent Parser]
-        WS[Web Searcher]
-        DS[Deep Scraper]
-        SYN[Synthesizer]
+        DRE[DeepResearchEngine]
     end
 
     subgraph External [External Services]
@@ -42,29 +42,22 @@ flowchart TB
     end
 
     UI -- "1. User Prompt + Files" --> FP
-    FP -- "2. Extract Text" --> UI
-    UI -- "3. Prompt + Context" --> DRE
-    
-    %% Iterative Research Loop
+    FP -- "2. Extract Text in Browser" --> UI
+    UI -- "3. Deep Research Prompt + Context" --> DRE
+
     subgraph Research Loop [Depth: 3 Iterations]
-        DRE -- "4. Generate 15-20 Queries" --> IP
-        IP <--> OLLAMA
-        
-        DRE -- "5. Execute Parallel Searches" --> WS
-        WS <--> DDG
-        WS <--> YT
-        
-        DRE -- "6. Scrape Prioritized URLs" --> DS
-        DS <--> PROXIES
-        PROXIES <--> WEB
-        
-        DS -- "7. Analyze Findings" --> DRE
+        DRE -- "4. Generate/Refine 15-20 Queries" --> OLLAMA
+        DRE -- "5. Execute Parallel Searches" --> DDG
+        DRE -- "5. Execute Parallel Searches" --> YT
+        DRE -- "6. Deduplicate & Select New URLs" --> DRE
+        DRE -- "7. Scrape Selected URLs" --> WEB
+        DRE -. "Fallback when needed" .-> PROXIES
+        PROXIES --> WEB
+        DRE -- "8. Analyze Findings & Continue" --> DRE
     end
-    
-    DRE -- "8. Track & Deduplicate Sources" --> SYN
-    SYN -- "9. Generate Final Response" --> OLLAMA
-    OLLAMA -- "10. Stream Data" --> DRE
-    
+
+    DRE -- "9. Build Final Research Context" --> OLLAMA
+    OLLAMA -- "10. Stream Research Response" --> DRE
     DRE -- "11. Stream to Client" --> UI
     UI --> MD
     MD -- "12. Render Rich Text & Media" --> UI
