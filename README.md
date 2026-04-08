@@ -188,10 +188,9 @@ The backend handles web search through an intensive, multi-layered iterative pro
 2.  **Iterative Research Loop (Depth of 3)**: The engine performs 3 complete cycles of research. In each cycle, it:
     *   Executes parallel searches across DuckDuckGo Lite and YouTube for all current queries.
     *   Discovers and deduplicates hundreds of URLs.
-    *   Deeply scrapes the top URLs using proxy rotation to bypass restrictions, extracting core text, OpenGraph images, and embedded videos via Cheerio.
+    *   Deeply scrapes prioritized URLs using proxy fallbacks when needed, extracting core text, OpenGraph images, and embedded videos via Cheerio.
     *   Analyzes the newly gathered context to generate another 15-20 highly targeted queries for the next iteration to fill knowledge gaps.
-3.  **Massive Scale Compilation**:
-By the end of the 3 iterations, the engine compiles and organizes a massive dataset.
+3. **Source Tracking & Deduplication**: Across the 3 iterations, the engine continuously accumulates and deduplicates discovered sources.
 4.  **Synthesis & Citation**: The most relevant extracted context is sent to the LLM to synthesize a comprehensive, expert-level final response, complete with strict inline citations and embedded rich media.
 
 ## Contributing
