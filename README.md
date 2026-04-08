@@ -13,10 +13,6 @@ Lorph is a full-stack AI chat application built to interact with cloud-based Lar
 *   **Rich Media & Citations**: Automatically embeds inline citations, extracted images, and YouTube videos found during the research phase.
 *   **Responsive UI**: A dark-themed, chat-based interface that handles dynamic model selection, file attachments, and real-time streaming text.
 
-## System Architecture & Data Flow
-
-This diagram shows how data moves from the user's input to the final response, highlighting the multi-iteration deep research loop.
-
 > [!IMPORTANT]
 > The diagram below shows Lorph’s high-level deep research workflow.
 > It is a conceptual view of the pipeline, not an exact map of the project’s internal code structure.
