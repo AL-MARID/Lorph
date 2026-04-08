@@ -180,7 +180,7 @@ The backend handles web research through an iterative, multi-step process that g
     *   Deeply scrapes prioritized URLs using proxy fallbacks when needed, extracting core text, OpenGraph images, and embedded videos via Cheerio.
     *   Analyzes the newly gathered context to generate another 15-20 highly targeted queries for the next iteration to fill knowledge gaps.
 3. **Source Tracking & Deduplication**: Across the 3 iterations, the engine continuously tracks, filters, and deduplicates discovered sources.
-4.  **Synthesis & Citation**: The most relevant extracted context is sent to the LLM to synthesize a comprehensive, expert-level final response, complete with strict inline citations and embedded rich media.
+4.  **Synthesis & Citation**: The most relevant extracted context is sent to the LLM to synthesize a comprehensive final response with inline citations and embedded rich media.
 
 > [!NOTE]
 > **Notes:**
