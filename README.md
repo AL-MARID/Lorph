@@ -36,7 +36,7 @@ flowchart TB
     subgraph External [External Services]
         OLLAMA[Ollama Cloud API]
         DDG[DuckDuckGo Lite]
-        YT[YouTube API]
+        YT[YouTube Search via yt-search]
         WEB[Target Websites]
         PROXIES[CORS Proxies]
     end
