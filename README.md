@@ -168,7 +168,7 @@ Lorph is configured to interact with the following cloud-based LLMs through Olla
 *   **Language**: TypeScript
 *   **Markdown Rendering**: React Markdown, remark-gfm, React Syntax Highlighter
 *   **File Processing**: PDF.js, Tesseract.js, Mammoth, read-excel-file
-*   **Web Scraping & Search**: Cheerio, node-fetch, yt-search
+*   **Web Scraping & Search**: Cheerio, node-fetch, DuckDuckGo Lite, yt-search
 
 ### File Processing Capabilities
 
