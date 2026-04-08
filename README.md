@@ -1,8 +1,7 @@
 # Lorph
+## Demo
 
-<p align="center">
-  <video src="./lorph_demo/lorph_demo.mp4" controls width="900"></video>
-</p>
+[Watch the demo video](./lorph_demo/lorph_demo.mp4)
 
 Lorph is a full-stack AI chat application built to interact with cloud-based Large Language Models (LLMs) using the Ollama framework. It combines a React frontend for handling user inputs and file processing with a Node.js backend dedicated to deep web research, scraping, and response synthesis.
 
