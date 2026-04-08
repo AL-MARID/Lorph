@@ -1,0 +1,44 @@
+{
+  "name": "lorph-ai-chat",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "tsx server.ts",
+    "dev": "tsx server.ts",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "abort-controller": "^3.0.0",
+    "cheerio": "^1.2.0",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "framer-motion": "^12.38.0",
+    "google-sr": "^6.0.0",
+    "lucide-react": "^0.563.0",
+    "mammoth": "1.6.0",
+    "motion": "^12.38.0",
+    "node-fetch": "^3.3.2",
+    "pdfjs-dist": "3.11.174",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-markdown": "^10.1.0",
+    "react-syntax-highlighter": "^16.1.0",
+    "read-excel-file": "5.7.1",
+    "remark-gfm": "^4.0.1",
+    "tesseract.js": "5.0.4",
+    "yt-search": "^2.13.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.2.2",
+    "@types/express": "^5.0.6",
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "tailwindcss": "^4.2.2",
+    "tsx": "^4.21.0",
+    "typescript": "~5.8.2",
+    "vite": "^7.3.1"
+  }
+}
