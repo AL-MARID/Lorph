@@ -193,6 +193,14 @@ The backend handles web search through an intensive, multi-layered iterative pro
 3. **Source Tracking & Deduplication**: Across the 3 iterations, the engine continuously accumulates and deduplicates discovered sources.
 4.  **Synthesis & Citation**: The most relevant extracted context is sent to the LLM to synthesize a comprehensive, expert-level final response, complete with strict inline citations and embedded rich media.
 
+> [!NOTE]
+> **Notes:**
+> - Deep research discovers more sources than it deeply reads.
+> - Link deduplication happens during source collection.
+> - Image OCR is currently configured with English recognition.
+> - In development, the frontend is served through Vite middleware mounted inside the Express server.
+
+
 ## Contributing
 
 1.  Fork the repository.
