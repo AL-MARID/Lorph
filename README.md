@@ -175,7 +175,7 @@ Lorph extracts text from attached files locally in the browser before sending th
 
 ### Web Search Integration (Deep Research)
 
-The backend handles web search through an iterative, multi-step process that generates targeted queries, runs parallel searches, filters and deduplicates discovered URLs, scrapes selected pages, and synthesizes a cited final answer:
+The backend handles web research through an iterative, multi-step process that generates targeted queries, runs parallel searches, filters and deduplicates discovered URLs, scrapes selected pages, and synthesizes a cited final answer:
 
 1.  **Initial Intent Parsing**: The LLM analyzes the user's core intent and generates an initial batch of 15-20 highly specific search queries.
 2.  **Iterative Research Loop (Depth of 3)**: The engine performs 3 complete cycles of research. In each cycle, it:
@@ -183,7 +183,7 @@ The backend handles web search through an iterative, multi-step process that gen
     *   Discovers and deduplicates candidate URLs across multiple search rounds before selecting a smaller subset for deeper scraping.
     *   Deeply scrapes prioritized URLs using proxy fallbacks when needed, extracting core text, OpenGraph images, and embedded videos via Cheerio.
     *   Analyzes the newly gathered context to generate another 15-20 highly targeted queries for the next iteration to fill knowledge gaps.
-3. **Source Tracking & Deduplication**: Across the 3 iterations, the engine continuously accumulates and deduplicates discovered sources.
+3. **Source Tracking & Deduplication**: Across the 3 iterations, the engine continuously tracks, filters, and deduplicates discovered sources.
 4.  **Synthesis & Citation**: The most relevant extracted context is sent to the LLM to synthesize a comprehensive, expert-level final response, complete with strict inline citations and embedded rich media.
 
 > [!NOTE]
