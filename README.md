@@ -38,7 +38,7 @@ flowchart TB
         DDG[DuckDuckGo Lite]
         YT[YouTube Search via yt-search]
         WEB[Target Websites]
-        PROXIES[CORS Proxies]
+        PROXIES[Proxy Fallbacks]
     end
 
     UI -- "1. User Prompt + Files" --> FP
@@ -54,7 +54,7 @@ flowchart TB
         WS <--> DDG
         WS <--> YT
         
-        DRE -- "6. Scrape Top URLs" --> DS
+        DRE -- "6. Scrape Prioritized URLs" --> DS
         DS <--> PROXIES
         PROXIES <--> WEB
         
@@ -191,8 +191,8 @@ The backend handles web search through an intensive, multi-layered iterative pro
     *   Deeply scrapes the top URLs using proxy rotation to bypass restrictions, extracting core text, OpenGraph images, and embedded videos via Cheerio.
     *   Analyzes the newly gathered context to generate another 15-20 highly targeted queries for the next iteration to fill knowledge gaps.
 3.  **Massive Scale Compilation**:
-4.  By the end of the 3 iterations, the engine compiles and organizes a massive dataset.
-5.  **Synthesis & Citation**: The most relevant extracted context is sent to the LLM to synthesize a comprehensive, expert-level final response, complete with strict inline citations and embedded rich media.
+By the end of the 3 iterations, the engine compiles and organizes a massive dataset.
+4.  **Synthesis & Citation**: The most relevant extracted context is sent to the LLM to synthesize a comprehensive, expert-level final response, complete with strict inline citations and embedded rich media.
 
 ## Contributing
 
