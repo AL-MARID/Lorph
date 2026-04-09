@@ -17,6 +17,8 @@ Lorph is a full-stack AI research application built on the Ollama framework for 
 > The diagram below shows Lorph’s high-level deep research workflow.
 > It is a conceptual view of the pipeline, not an exact map of the project’s internal code structure.
 
+## Deep Research Architecture & Data Flow
+
 ```mermaid
 flowchart TB
     subgraph Client [Frontend - React / Vite]
