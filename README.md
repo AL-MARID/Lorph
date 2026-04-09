@@ -7,7 +7,7 @@ Lorph is a full-stack AI research application built on the Ollama framework for 
 
 ## Key Features
 
-*   **Multi-Model LLM Support**: Connects to multiple cloud-based LLMs through Ollama for research and response generation.
+*   **Multi-Model LLM Access**: Connects to multiple cloud-based LLMs through Ollama.
 *   **Deep Web Research**: The backend parses user intent, generates search queries, runs parallel web searches, and scrapes web pages to provide accurate, cited answers.
 *   **Local File Processing**: Extracts text directly in the browser from Images (OCR), PDFs, Word documents (.docx), Excel files (.xlsx), and plain text/code files.
 *   **Rich Media & Citations**: Automatically embeds inline citations, extracted images, and YouTube videos found during the research phase.
