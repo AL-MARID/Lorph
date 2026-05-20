@@ -1,4 +1,4 @@
-Lorph:[LORPH](https://lorph-v1-2.onrender.com/)
+[LORPH](https://lorph-v1-2.onrender.com/)
 
 # Lorph
 
